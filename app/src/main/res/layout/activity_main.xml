@@ -4,15 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFD740"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/you_have"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <TextView
+        android:id="@+id/moneyValue"
+        android:layout_width="134dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="156dp"
+        android:gravity="center"
+        android:text="@string/money_value"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMakeItRain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/make_it_rain"
+        android:onClick="showMoney"
+        app:layout_constraintEnd_toEndOf="@+id/moneyValue"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/moneyValue"
+        app:layout_constraintTop_toBottomOf="@+id/moneyValue" />
+
+    <Button
+        android:id="@+id/buttonShowInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:onClick="showInfo"
+        android:text="@string/show_info"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMakeItRain"
+        app:layout_constraintStart_toStartOf="@+id/buttonMakeItRain"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMakeItRain" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
